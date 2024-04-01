@@ -20,35 +20,57 @@ class _PreRequirementConfoState extends State<PreRequirementConfo> {
         color: Colors.white,
         child: Column(
           children: [
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Positioned(
-                  child: Image.asset(
-                    'assets/confo.gif',
-                    width: screenWidth * 0.9,
-                    height: screenHeight * 0.9,
-                  ),
-                ),
-                Positioned(
-                  top: screenWidth * 1.4,
-                  child: const Column(
-                    children: [
-                      Text(
-                        'You are in Queue !',
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w500),
-                      ),
-                      Text(
-                        'We will Notify You !',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w700),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            SizedBox(
+              height: screenHeight * .3,
             ),
+            Image.asset(
+              'assets/confo.gif',
+              width: screenWidth * 0.9,
+              // height: screenHeight * 0.6,
+            ),
+            SizedBox(
+              height: screenHeight * .02,
+            ),
+            Text(
+              'You are in Queue !',
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            ),
+            Text(
+              'We will Notify You !',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
+            SizedBox(
+              height: screenHeight * .22,
+            ),
+            // Stack(
+            //   alignment: Alignment.center,
+            //   children: [
+            //     Positioned(
+            //       child: Image.asset(
+            //         'assets/confo.gif',
+            //         width: screenWidth * 0.9,
+            //         height: screenHeight * 0.9,
+            //       ),
+            //     ),
+            //     Positioned(
+            //       top: screenWidth * 1.4,
+            //       child: const Column(
+            //         children: [
+            //           Text(
+            //             'You are in Queue !',
+            //             style: TextStyle(
+            //                 fontSize: 12, fontWeight: FontWeight.w500),
+            //           ),
+            //           Text(
+            //             'We will Notify You !',
+            //             style: TextStyle(
+            //                 fontSize: 16, fontWeight: FontWeight.w700),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ],
+            // ),
             const ButtonWidget(
               text: 'Go to Home !',
               color: Color(0xFF414eca),
