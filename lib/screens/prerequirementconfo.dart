@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:training/screens/training_screen.dart';
 import 'package:training/widgets/button_widget.dart';
 
 class PreRequirementConfo extends StatefulWidget {
@@ -50,19 +49,9 @@ class _PreRequirementConfoState extends State<PreRequirementConfo> {
                 ),
               ],
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TrainingScreen(),
-                  ),
-                );
-              },
-              child: const ButtonWidget(
-                text: 'Go to Home !',
-                color: Color(0xFF414eca),
-              ),
+            const ButtonWidget(
+              text: 'Go to Home !',
+              color: Color(0xFF414eca),
             ),
           ],
         ),
