@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:training/screens/training_screen.dart';
-import 'package:training/screens/trainingdetailed.dart';
+import 'package:training/screens/training_screens/trainingdetailed.dart';
 import 'package:training/widgets/button_widget.dart';
 
 class PracticeScreen extends StatefulWidget {
-  const PracticeScreen({Key? key}) : super(key: key);
+  const PracticeScreen({super.key});
 
   @override
   State<PracticeScreen> createState() => _PracticeScreenState();
@@ -29,7 +27,6 @@ class _PracticeScreenState extends State<PracticeScreen> {
             Image.asset(
               'assets/error1.gif',
               width: screenWidth * 0.8,
-              // height: screenHeight * 0.8,
             ),
             ShaderMask(
               shaderCallback: (Rect bounds) {

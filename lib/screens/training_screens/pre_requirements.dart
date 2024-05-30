@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:training/screens/practice.dart';
-import 'package:training/screens/prerequirementconfo.dart';
+import 'package:training/screens/training_screens/practice.dart';
+import 'package:training/screens/training_screens/prerequirementconfo.dart';
 import 'package:training/widgets/button_widget.dart';
-import 'package:training/widgets/requirement_text.dart';
-import 'package:training/widgets/training_content.dart';
+import 'package:training/widgets/training_widgets/requirement_text.dart';
+import 'package:training/widgets/training_widgets/training_content.dart';
 
 class PrerequirementScreen extends StatefulWidget {
   const PrerequirementScreen({super.key});

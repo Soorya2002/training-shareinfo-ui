@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:training/screens/assessment_screen.dart';
+import 'package:training/screens/training_screens/assessment_detailed.dart';
 import 'package:training/widgets/button_widget.dart';
-import 'package:training/screens/pre_requirements.dart';
-import 'package:training/widgets/training_content.dart';
-import 'package:training/widgets/training_text.dart';
+import 'package:training/screens/training_screens/pre_requirements.dart';
+import 'package:training/widgets/training_widgets/training_content.dart';
+import 'package:training/widgets/training_widgets/training_text.dart';
 
 class TrainingDetailed extends StatefulWidget {
   const TrainingDetailed({super.key});
@@ -94,7 +94,7 @@ class _TrainingDetailedState extends State<TrainingDetailed> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AssessmentScreen(),
+                    builder: (context) => AssessmentDetailedScreen(),
                   ),
                 );
               },

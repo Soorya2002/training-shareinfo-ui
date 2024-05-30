@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   material_symbols_icons: ^4.2719.3
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,13 @@ flutter:
     - assets/error.gif
     - assets/error1.gif
     - assets/confo.gif
+    - assets/shareinfo.png
+    - assets/leaderboard.gif
+    - assets/unlock.png
+    - assets/instruction.gif
+    - assets/arrow.png
+    - assets/heading1.png
+    - assets/heading2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

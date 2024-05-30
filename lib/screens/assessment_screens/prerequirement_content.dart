@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
-import 'package:training/widgets/box_container.dart';
+import 'package:training/widgets/assessment_widgets/assessmentbox_container.dart';
 
-class TrainingContent extends StatelessWidget {
+class PreRequirementContent extends StatefulWidget {
   final String img;
   final String text1;
   final String texta;
   final String textb;
   final String textc;
-  final String text2;
-  final String date;
+
   final IconData? myIconData;
-  const TrainingContent({
+  const PreRequirementContent({
     super.key,
     required this.img,
     required this.text1,
     required this.texta,
     required this.textb,
     required this.textc,
-    required this.text2,
-    required this.date,
-    this.myIconData = Symbols.notification_add,
+    this.myIconData = Symbols.avg_pace,
   });
+
+  @override
+  State<PreRequirementContent> createState() => _TrainingContentState();
+}
+
+class _TrainingContentState extends State<PreRequirementContent> {
+  List<Map<String, dynamic>> data = [];
 
   @override
   Widget build(BuildContext context) {
@@ -29,40 +33,40 @@ class TrainingContent extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: screenHeight * 0.025,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-                width: 46,
-                height: 46,
+                width: screenWidth * 0.1,
+                height: screenHeight * 0.05,
                 decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(102, 139, 139, 139),
                     ),
                     borderRadius: BorderRadius.circular(12.5),
                     color: Colors.white),
-                child: Image.asset(img)),
+                child: Image.asset(widget.img)),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  text1,
+                  widget.text1,
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const SizedBox(
-                  height: 3,
+                SizedBox(
+                  height: screenHeight * 0.01,
                 ),
                 Text.rich(
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: texta,
+                        text: widget.texta,
                         style: const TextStyle(
                           color: Colors.orange,
                           fontSize: 13,
@@ -70,7 +74,7 @@ class TrainingContent extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: textb,
+                        text: widget.textb,
                         style: const TextStyle(
                           color: Color(0xFF8B8B8B),
                           fontSize: 13,
@@ -78,7 +82,7 @@ class TrainingContent extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: textc,
+                        text: widget.textc,
                         style: const TextStyle(
                           color: Color(0xFF077BD8),
                           fontSize: 13,
@@ -91,64 +95,50 @@ class TrainingContent extends StatelessWidget {
               ],
             ),
             Icon(
-              myIconData,
+              widget.myIconData,
               color: Color(0xFF414ECA),
               size: 28,
             )
           ],
         ),
-        const SizedBox(
-          height: 12,
+        SizedBox(
+          height: screenHeight * 0.015,
         ),
         Container(
           width: screenWidth * 0.8,
-          height: 1,
+          height: screenHeight * 0.001,
           color: const Color(0xFFD9D9D9),
         ),
-        const SizedBox(
-          height: 6,
+        SizedBox(
+          height: screenHeight * 0.01,
         ),
         Column(
           children: [
-            Text(
-              text2,
-              style: const TextStyle(
-                color: Color(0xFF8B8B8B),
-                fontSize: 12.5,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 BoxContainer(
-                  width: screenWidth * 0.2,
+                  width: screenWidth * 0.25,
                   height: screenHeight * 0.03,
-                  swidth: 65,
-                  textx: 'On-Site',
+                  textx: '25 Questions',
                   bcolor: Color(0xFF1B94F6),
                   tcolor: Color(0xFF1B94F6),
                 ),
-                const SizedBox(
-                  width: 10,
+                BoxContainer(
+                  width: screenWidth * 0.24,
+                  height: screenHeight * 0.03,
+                  textx: '25 Minutes',
+                  bcolor: Color(0xFF1B94F6),
+                  tcolor: Color(0xFF1B94F6),
                 ),
-                Text(
-                  date,
-                  style: const TextStyle(
-                    fontSize: 11,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFFF31919),
-                  ),
+                BoxContainer(
+                  width: screenWidth * 0.3,
+                  height: screenHeight * 0.03,
+                  textx: 'Last Date: 25-04-2024',
+                  bcolor: Color(0xFFF31919),
+                  tcolor: Color(0xFFF31919),
                 ),
               ],
-            ),
-            BoxContainer(
-              swidth: 108,
-              width: screenWidth * 0.5,
-              height: screenHeight * 0.035,
-              textx: 'ShareInfo for Learn Assessment',
-              bcolor: Color(0xFFEE5602),
-              tcolor: Color(0xFFEE5602),
             ),
           ],
         ),
