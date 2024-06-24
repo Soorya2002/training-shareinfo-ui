@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:training/screens/assessment_screens/assessment.dart';
+import 'package:training/screens/assessment_screens/mcq_technical.dart';
 import 'package:training/widgets/assessment_widgets/assessment_requirement_text.dart';
 import 'package:training/widgets/button_widget.dart';
-import 'package:training/screens/assessment_screens/prerequirement_content.dart';
+import 'package:training/widgets/assessment_widgets/prerequirement_content.dart';
 
 class PrerequirementScreenB extends StatefulWidget {
   const PrerequirementScreenB({super.key});
@@ -76,7 +76,7 @@ class _PrerequirementScreenBState extends State<PrerequirementScreenB> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AssessmentScreen(),
+                    builder: (context) => McqTechnical(),
                   ),
                 );
               },

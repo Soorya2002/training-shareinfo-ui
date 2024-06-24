@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/screens/assessment_screens/technical_assessment.dart';
 import 'package:training/widgets/assessment_widgets/mcq/button.dart';
 
 class SuccessPage extends StatelessWidget {
@@ -47,8 +48,15 @@ class SuccessPage extends StatelessWidget {
               height: screenSize.height * .2,
             ),
             Button(
-              text: "Go to Assessments Home !",
-              onTap: () {},
+              text: "Try Technical Assessment",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TechnicalAssessment(),
+                  ),
+                );
+              },
             ),
           ],
         ),

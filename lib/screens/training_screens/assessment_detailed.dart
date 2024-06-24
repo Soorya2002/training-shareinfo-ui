@@ -90,7 +90,7 @@ class _AssessmentScreenState extends State<AssessmentDetailedScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => AssessmentSplashscreen(),
+                                builder: (context) => TrainingScreen(),
                               ),
                             );
                           },
