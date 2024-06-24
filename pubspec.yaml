@@ -74,6 +74,23 @@ flutter:
     - assets/heading2.png
     - assets/mcq.png
     - assets/technical.png
+    - assets/alex.png
+    - assets/whiteshade.png
+    - assets/exit.gif
+    - assets/redshade.png
+    - assets/completed.gif
+    - assets/zone.png
+    - assets/max.png
+    - assets/mia.png
+    - assets/boxcut.png
+    - assets/chris.png
+    - assets/blueshade.png
+    - assets/aspirant.png
+    - assets/backarrow.png
+    - assets/ben.png
+    - assets/ashley.png
+    - assets/ann.png
+    - assets/arrowup.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

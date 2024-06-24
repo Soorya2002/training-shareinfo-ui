@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/screens/assessment_screens/submit_screen.dart';
 import 'package:training/widgets/button_widget.dart'; // Make sure this import is correct based on your project structure
 
 class TechnicalContainer extends StatefulWidget {
@@ -189,9 +190,19 @@ class _TechnicalContainerState extends State<TechnicalContainer> {
         ),
         GestureDetector(
           onTap: _nextQuestion,
-          child: ButtonWidget(
-            text: 'Next Question',
-            color: const Color(0xFF414ECA),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SubmitScreen(),
+                ),
+              );
+            },
+            child: ButtonWidget(
+              text: 'Next Question',
+              color: const Color(0xFF414ECA),
+            ),
           ),
         ),
       ],
